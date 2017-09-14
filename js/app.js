@@ -102,8 +102,10 @@ for (var i = 0, len = cardList.length; i < len; i++){
         var isClicked = targetCard.classList.contains('open');
         // If the card is not opened, continue to process it.
         if(!isClicked){
-            display(targetCard);
-            checkOpenCardList();
+            display(targetCard)
+            setTimeout(function(){
+                checkOpenCardList();
+            },300);
             checkComplete();
         }
     })
@@ -148,15 +150,15 @@ function compare(firstCard, secondCard){
         firstCard.classList.add('match');
         secondCard.classList.add('match');
     }else {
-        firstCard.classList.remove('open');
-        secondCard.classList.remove('open');
+        firstCard.classList.remove('open','show');
+        secondCard.classList.remove('open','show');
         firstCard.classList.add('unmatch');
         secondCard.classList.add('unmatch');
         // Use setTimeout function to take time for cards to animate before it is hided.
         setTimeout(function(){
-                firstCard.classList.remove('show','unmatch');
-                secondCard.classList.remove('show','unmatch');
-            }, 500);
+                firstCard.classList.remove('unmatch');
+                secondCard.classList.remove('unmatch');
+            }, 700);
     }
 }
 
