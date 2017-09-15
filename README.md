@@ -9,7 +9,16 @@
  Note: You also see the app at https://t-lab05.github.io/Memory-Game/.
  
 # Feature
-  I bult up the game from [the starter code](https://github.com/udacity/fend-project-memory-game).   
+  I bult up the game from [the starter code](https://github.com/udacity/fend-project-memory-game). 
+  The following feature is my contribution.
+  * All functions except shuffle()
+    * Click events for cards
+    * The function to compare two cards
+    * The function to 
+  * CSS animation for cards
+  * Star rate
+  * Time counter
+  * Win Screen
   
   
   
