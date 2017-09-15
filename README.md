@@ -11,10 +11,12 @@
 # Feature
   I bult up the game from [the starter code](https://github.com/udacity/fend-project-memory-game). 
   The following feature is my contribution.
-  * All functions except shuffle()
+  * All functions except shuffle( ). 
+    For example:
     * Click events for cards
+    * Functions to manage open cards
     * The function to compare two cards
-    * The function to 
+    * The function to check completion
   * CSS animation for cards
   * Star rate
   * Time counter
