@@ -69,7 +69,7 @@ h1 {
     transform: rotateY(180deg);
     background: #02b3e4;
     cursor: default;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .deck .card.show {
@@ -80,8 +80,9 @@ h1 {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+    transform: rotateY(180deg);
     animation-name: correctGuess;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
 }
 
 .deck .card.unmatch{
@@ -90,9 +91,9 @@ h1 {
 }
 
 @keyframes correctGuess {
-    25% { transform: scale(1.5,0.7) }
-    50% { transform: scale(1,1) }
-    75% { transform: scale(1.2,0.9) }
+    25% { transform: scale(1.5,0.7) rotateY(180deg)}
+    50% { transform: scale(1,1) rotateY(180deg)}
+    75% { transform: scale(1.2,0.9) rotateY(180deg)}
 }
 
 @keyframes incorrectGuess {
