@@ -6,7 +6,7 @@
  1. Download zip files from the Github
  2. Open index.html with your browser
  
- Note: You also see the app at https://t-lab05.github.io/Memory-Game/.
+ Note: You can also see the app at https://t-lab05.github.io/Memory-Game/.
  
 # Feature
   I bult up the game from [the starter code](https://github.com/udacity/fend-project-memory-game). 
