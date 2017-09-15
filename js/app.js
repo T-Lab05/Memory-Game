@@ -185,9 +185,7 @@ function incrementMoveCount(){
 // A function to check if the game is completed or not
 // If it does, show win screen
 function checkComplete(){
-    console.log("a")
     var cardList = document.getElementsByClassName('card');
-    console.log(cardList)
     var isCompleted = true;
     for (i = 0, len = cardList.length; i < len; i++) {
         if (!cardList[i].classList.contains('match') ) {
