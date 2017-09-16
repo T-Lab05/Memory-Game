@@ -37,11 +37,36 @@ h1 {
  * Styles for the deck of cards
  */
 
+
+/* For smartphone and tablet */
+@media (max-width: 768px){
+    .deck {
+        width: 85vw;
+    }
+    .deck .card {
+        width: 16vw;
+        height: 16vw;
+        margin: 1vw;
+    }
+}
+
+/* For Desktop */
+@media (min-width: 769px){
+    .deck {
+        width: 660px;
+        min-height: 680px;
+    }
+    .deck .card {
+        height: 125px;
+        width: 125px;
+    }
+
+}
+
+
 .deck {
-    width: 660px;
-    min-height: 680px;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
+    padding: 3vw;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
@@ -52,8 +77,6 @@ h1 {
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
@@ -87,7 +110,7 @@ h1 {
 
 .deck .card.unmatch{
     animation-name: incorrectGuess;
-    animation-duration: 0.7s
+    animation-duration: 0.5s
 }
 
 @keyframes correctGuess {
@@ -109,7 +132,8 @@ h1 {
  */
 
 .score-panel {
-    width: 345px;
+    width: 50vw;
+    max-width: 350px;
     margin-bottom: 10px;
     align-items: center;
 }
@@ -176,6 +200,7 @@ h1 {
     font-size: 15px;
     padding: 20px;
     text-decoration: none;
+    background-color: white;
 }
 
 

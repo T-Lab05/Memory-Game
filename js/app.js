@@ -101,7 +101,7 @@ for (var i = 0, len = cardList.length; i < len; i++){
         // Check if the card has already opened.
         var isClicked = targetCard.classList.contains('open');
         // If the card is not opened, continue to process it.
-        if(!isClicked){
+        if(!isClicked && openCardList.length !== 2){
             display(targetCard)
             setTimeout(function(){
                 checkOpenCardList();
@@ -160,7 +160,7 @@ function compare(firstCard, secondCard){
         setTimeout(function(){
                 firstCard.classList.remove('unmatch');
                 secondCard.classList.remove('unmatch');
-            }, 700);
+            }, 500);
     }
 }
 
@@ -210,9 +210,11 @@ function showWinScreen(){
     // Get HTMLCollection of children of starsHTML
     var starHTMLCollection = starsHTML.children;
     var numberOfStars = starHTMLCollection.length;
-    console.log(numberOfStars);
+    // Grab the element with 'time' class
+    var timeHTML = document.getElementsByClassName('time')[0];
+
     moveResult.innerText = moveCount;
-    timeResult.innerText = time;
+    timeResult.innerText = timeHTML.innerText;
     starResult.innerText = numberOfStars;
 
     winScreen.style.display = 'flex';
@@ -237,7 +239,13 @@ function createStars(number){
 function startTimeCount(){
     setInterval(function(){
         time++;
-        timeHTML.innerText = time;
+        var minutes = Math.floor(time / 60);
+        var seconds = time % 60;
+        if (seconds < 10){
+            timeHTML.innerText = minutes + ':0' + seconds;
+        }else{
+            timeHTML.innerText = minutes + ':' + seconds;
+        };
     },1000);
 }
 
