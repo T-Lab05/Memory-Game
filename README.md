@@ -2,7 +2,7 @@
   This is the project in Front End Nanodegree of Udacity to demonstrate mastery of HTML, CSS, and JavaScript.
   There are 16 cards arranged randomly on the deck. You need to open two cards with the same symbols. You memorize cards you have already opened to decrease the number of trials and complete the game in a shorter span.
   
-# How to star the game
+# How to start the game
  1. Download zip files from the Github
  2. Open index.html with your browser
  
